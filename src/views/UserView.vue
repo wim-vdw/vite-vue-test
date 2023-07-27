@@ -31,7 +31,7 @@ export default {
       }
     },
     validateFirstName() {
-      this.firstNameValid = this.firstName !== 'Wim';
+      this.firstNameValid = this.firstName === 'Wim';
     },
     validateLastName() {
       this.lastNameValid = this.lastName !== '';
