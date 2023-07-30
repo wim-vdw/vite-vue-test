@@ -8,6 +8,7 @@ export default {
       endpoint: '/people/1/',
       result: '',
       disabled: false,
+      activeColor: '',
     };
   },
   methods: {
@@ -16,8 +17,10 @@ export default {
       const starwarsClient = new StarwarsClient(this.baseURL);
       const response = await starwarsClient.callAPI(this.endpoint);
       if (response.status === 'OK') {
+        this.activeColor = 'green';
         this.result = response.data;
       } else {
+        this.activeColor = 'red';
         this.result = response.error.message;
       }
       this.disabled = false;
@@ -51,6 +54,6 @@ export default {
       </button>
     </div>
     <div>Result:</div>
-    <p>{{ result }}</p>
+    <p :style="{ color: activeColor }">{{ result }}</p>
   </div>
 </template>

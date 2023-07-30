@@ -5,7 +5,7 @@ export default {
   name: 'App',
   data() {
     return {
-      version: '2.1',
+      version: '2.2',
     };
   },
   components: {
