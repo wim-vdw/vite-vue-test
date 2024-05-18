@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue';
 import UserView from '../views/UserView.vue';
 import AboutView from '../views/AboutView.vue';
 import StarwarsView from '../views/StarwarsView.vue';
+import CompositionView from '../views/CompositionView.vue';
 import NotFoundView from '../views/NotFoundView.vue';
 import { useUserStore } from '../stores/user.js';
 
@@ -26,6 +27,14 @@ const router = createRouter({
       path: '/starwars',
       name: 'starwars',
       component: StarwarsView,
+      meta: {
+        requiresAuthentication: true,
+      },
+    },
+    {
+      path: '/composition',
+      name: 'composition',
+      component: CompositionView,
       meta: {
         requiresAuthentication: true,
       },

@@ -26,6 +26,9 @@ export default {
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to="/user">User</router-link>
           <router-link class="nav-link" to="/starwars">Star Wars</router-link>
+          <router-link class="nav-link" to="/composition">
+            Composition API
+          </router-link>
           <router-link class="nav-link" to="/about">About</router-link>
         </div>
       </div>
