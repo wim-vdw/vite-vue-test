@@ -7,6 +7,10 @@ function increment() {
   counter.value++;
 }
 
+function decrement() {
+  counter.value--;
+}
+
 const name = reactive({
   firstName: 'Wim',
   lastName: 'Van den Wyngaert',
@@ -22,10 +26,15 @@ onMounted(() => {
 
 <template>
   <div class="my-3">
-    <p>Counter: {{ counter }}</p>
-    <button class="btn btn-primary me-3" @click.prevent="increment">
-      Increase counter
-    </button>
+    <p>
+      Counter: {{ counter }}
+      <button class="btn btn-primary me-3" @click.prevent="increment">
+        Increase counter
+      </button>
+      <button class="btn btn-primary me-3" @click.prevent="decrement">
+        Decrease counter
+      </button>
+    </p>
     <p>First Name: {{ name.firstName }}</p>
     <p>Last Name: {{ name.lastName }}</p>
   </div>
