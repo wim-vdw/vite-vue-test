@@ -41,12 +41,16 @@ onMounted(() => {
     </p>
     <p>First Name: {{ name.firstName }}</p>
     <p>Last Name: {{ name.lastName }}</p>
-    <p class="fullname">Full Name: {{ fullName }}</p>
+    <h1>{{ fullName }}</h1>
   </div>
 </template>
 
 <style scoped>
-.fullname {
-  color: blue;
+h1 {
+  color: white;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 25px blue,
+    0 0 5px darkblue;
 }
 </style>
