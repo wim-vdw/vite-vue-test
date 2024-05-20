@@ -1,6 +1,6 @@
 <script>
-import { useUserStore } from '../stores/user.js';
-import InputForm from '../components/InputForm.vue';
+import { useUserStore } from '@/stores/user.js';
+import InputForm from '@/components/InputForm.vue';
 
 export default {
   components: {
@@ -31,7 +31,7 @@ export default {
       }
     },
     validateFirstName() {
-      this.firstNameValid = this.firstName === 'Wim';
+      this.firstNameValid = this.firstName !== '';
     },
     validateLastName() {
       this.lastNameValid = this.lastName !== '';
@@ -64,7 +64,7 @@ export default {
             @keyup="validateFirstName"
             v-model.trim="firstName"
           />
-          <div class="invalid-tooltip">First name must be Wim.</div>
+          <div class="invalid-tooltip">First name is a mandatory field.</div>
         </div>
         <div class="position-relative">
           <label for="last" class="form-label">Last name:</label>

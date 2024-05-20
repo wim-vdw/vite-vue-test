@@ -1,25 +1,12 @@
 <script setup>
-import { ref, reactive, onMounted } from 'vue';
+import { onMounted } from 'vue';
+import { useUserStore2 } from '@/stores/user';
 
-const counter = ref(0);
-
-function increment() {
-  counter.value++;
-}
-
-function decrement() {
-  counter.value--;
-}
-
-const name = reactive({
-  firstName: 'Wim',
-  lastName: 'Van den Wyngaert',
-});
+const store = useUserStore2();
 
 onMounted(() => {
   setTimeout(() => {
-    name.firstName = name.firstName.toUpperCase();
-    name.lastName = name.lastName.toUpperCase();
+    store.upper();
   }, 3000);
 });
 </script>
@@ -27,21 +14,26 @@ onMounted(() => {
 <template>
   <div class="my-3">
     <p>
-      Counter: {{ counter }}
-      <button class="btn btn-primary me-3" @click.prevent="increment">
+      Counter: {{ store.count }}
+      <button class="btn btn-primary me-3" @click.prevent="store.increment()">
         Increase counter
       </button>
-      <button class="btn btn-primary me-3" @click.prevent="decrement">
+      <button class="btn btn-primary me-3" @click.prevent="store.decrement">
         Decrease counter
       </button>
     </p>
-    <p>First Name: {{ name.firstName }}</p>
-    <p>Last Name: {{ name.lastName }}</p>
+    <p>First Name: {{ store.name.firstName }}</p>
+    <p>Last Name: {{ store.name.lastName }}</p>
+    <h1>{{ store.fullName }}</h1>
   </div>
 </template>
 
 <style scoped>
 h1 {
-  background: red;
+  color: white;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 25px blue,
+    0 0 5px darkblue;
 }
 </style>

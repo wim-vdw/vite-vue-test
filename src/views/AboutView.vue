@@ -1,5 +1,5 @@
 <script>
-import { useTitleStore } from '../stores/title.js';
+import { useTitleStore } from '@/stores/title';
 
 export default {
   setup() {
