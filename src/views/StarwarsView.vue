@@ -1,5 +1,5 @@
 <script>
-import { StarwarsClient } from '../services/StarwarsService';
+import { StarwarsClient } from '@/services/StarwarsService';
 
 export default {
   data() {

@@ -1,6 +1,6 @@
 <script>
 import PersonView from './PersonView.vue';
-import { useUserStore } from '../stores/user.js';
+import { useUserStore } from '@/stores/user';
 import { mapState, mapWritableState } from 'pinia';
 
 export default {

@@ -1,6 +1,6 @@
 <script>
-import { useUserStore } from '../stores/user.js';
-import InputForm from '../components/InputForm.vue';
+import { useUserStore } from '@/stores/user.js';
+import InputForm from '@/components/InputForm.vue';
 
 export default {
   components: {
