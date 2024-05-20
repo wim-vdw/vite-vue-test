@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, onMounted } from 'vue';
+import { ref, reactive, onMounted, computed } from 'vue';
 
 const counter = ref(0);
 
@@ -14,6 +14,10 @@ function decrement() {
 const name = reactive({
   firstName: 'Wim',
   lastName: 'Van den Wyngaert',
+});
+
+const fullName = computed(() => {
+  return name.lastName + ', ' + name.firstName;
 });
 
 onMounted(() => {
@@ -37,11 +41,12 @@ onMounted(() => {
     </p>
     <p>First Name: {{ name.firstName }}</p>
     <p>Last Name: {{ name.lastName }}</p>
+    <p class="fullname">Full Name: {{ fullName }}</p>
   </div>
 </template>
 
 <style scoped>
-h1 {
-  background: red;
+.fullname {
+  color: blue;
 }
 </style>
