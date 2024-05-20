@@ -12,8 +12,8 @@ function decrement() {
 }
 
 const name = reactive({
-  firstName: 'Wim',
-  lastName: 'Van den Wyngaert',
+  firstName: 'James',
+  lastName: 'Bond',
 });
 
 const fullName = computed(() => {
