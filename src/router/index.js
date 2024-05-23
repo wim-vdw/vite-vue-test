@@ -28,7 +28,7 @@ const router = createRouter({
       name: 'starwars',
       component: StarwarsView,
       meta: {
-        requiresAuthentication: true,
+        requiresAuthentication: false,
       },
     },
     {
@@ -36,7 +36,7 @@ const router = createRouter({
       name: 'composition',
       component: CompositionView,
       meta: {
-        requiresAuthentication: true,
+        requiresAuthentication: false,
       },
     },
     {
@@ -44,7 +44,7 @@ const router = createRouter({
       name: 'about',
       component: AboutView,
       meta: {
-        requiresAuthentication: true,
+        requiresAuthentication: false,
       },
     },
     {
