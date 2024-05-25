@@ -18,10 +18,21 @@ onMounted(() => {
       <button class="btn btn-primary me-3" @click.prevent="store.increment()">
         Increase counter
       </button>
-      <button class="btn btn-primary me-3" @click.prevent="store.decrement">
+      <button class="btn btn-primary me-3" @click.prevent="store.decrement()">
         Decrease counter
       </button>
+      <button
+        class="btn btn-primary me-3"
+        @click.prevent="store.addCounterToList()"
+      >
+        Add counter to list
+      </button>
     </p>
+    <ul>
+      <li v-for="(counter, index) in store.counterList" :key="index">
+        {{ counter }}
+      </li>
+    </ul>
     <p>First Name: {{ store.name.firstName }}</p>
     <p>Last Name: {{ store.name.lastName }}</p>
     <h1>{{ store.fullName }}</h1>

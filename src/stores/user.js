@@ -34,5 +34,21 @@ export const useUserStore2 = defineStore('counter', () => {
     name.lastName = name.lastName.toUpperCase();
   }
 
-  return { count, name, fullName, doubleCount, increment, decrement, upper };
+  const counterList = ref([]);
+
+  function addCounterToList() {
+    counterList.value.push(count.value);
+  }
+
+  return {
+    count,
+    name,
+    fullName,
+    doubleCount,
+    counterList,
+    increment,
+    decrement,
+    upper,
+    addCounterToList,
+  };
 });
