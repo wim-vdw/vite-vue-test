@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div class="my-3">
-    <h1 v-if="titleStore.titleActive" class="my-3">About page</h1>
+    <h1 v-show="titleStore.titleActive" class="my-3">About page</h1>
     <button
       class="me-3"
       :class="titleStore.buttonClass"
