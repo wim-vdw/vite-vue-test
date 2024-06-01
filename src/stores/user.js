@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { ref, reactive, computed } from 'vue';
 
-export const useUserStore = defineStore('user', {
+export const useUserStore1 = defineStore('user1', {
   state() {
     return {
       firstName: 'James',
@@ -11,7 +11,7 @@ export const useUserStore = defineStore('user', {
   },
 });
 
-export const useUserStore2 = defineStore('counter', () => {
+export const useUserStore2 = defineStore('user2', () => {
   const count = ref(0);
   const doubleCount = computed(() => count.value * 2);
 

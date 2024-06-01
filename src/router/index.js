@@ -5,7 +5,7 @@ import AboutView from '../views/AboutView.vue';
 import StarwarsView from '../views/StarwarsView.vue';
 import CompositionView from '../views/CompositionView.vue';
 import NotFoundView from '../views/NotFoundView.vue';
-import { useUserStore } from '../stores/user.js';
+import { useUserStore1 } from '../stores/user.js';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -56,7 +56,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to) => {
-  const userStore = useUserStore();
+  const userStore = useUserStore1();
   if (to.meta.requiresAuthentication && !userStore.authenticated) {
     alert('Authenticate first!');
     return { name: 'home' };

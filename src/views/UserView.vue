@@ -1,5 +1,5 @@
 <script>
-import { useUserStore } from '@/stores/user.js';
+import { useUserStore1 } from '@/stores/user.js';
 import InputForm from '@/components/InputForm.vue';
 
 export default {
@@ -7,7 +7,7 @@ export default {
     InputForm,
   },
   setup() {
-    const userStore = useUserStore();
+    const userStore = useUserStore1();
 
     return { userStore };
   },

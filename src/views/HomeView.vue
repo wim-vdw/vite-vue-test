@@ -1,6 +1,6 @@
 <script>
 import PersonView from './PersonView.vue';
-import { useUserStore } from '@/stores/user';
+import { useUserStore1 } from '@/stores/user';
 import { mapState, mapWritableState } from 'pinia';
 
 export default {
@@ -8,8 +8,8 @@ export default {
     PersonView,
   },
   computed: {
-    ...mapState(useUserStore, ['firstName']),
-    ...mapWritableState(useUserStore, {
+    ...mapState(useUserStore1, ['firstName']),
+    ...mapWritableState(useUserStore1, {
       achternaam: 'lastName',
       authenticated: 'authenticated',
     }),
