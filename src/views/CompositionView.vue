@@ -21,10 +21,7 @@ onMounted(() => {
       <button class="btn btn-primary me-3" @click="store.decrement()">
         Decrease counter
       </button>
-      <button
-        class="btn btn-primary me-3"
-        @click="store.addCounterToList"
-      >
+      <button class="btn btn-primary me-3" @click="store.addCounterToList">
         Add counter to list
       </button>
     </p>
