@@ -15,10 +15,10 @@ onMounted(() => {
   <div class="my-3">
     <p>
       Counter: {{ store.count }}
-      <button class="btn btn-primary me-3" @click="store.increment()">
+      <button class="btn btn-primary me-3" @click="store.increment">
         Increase counter
       </button>
-      <button class="btn btn-primary me-3" @click="store.decrement()">
+      <button class="btn btn-primary me-3" @click="store.decrement">
         Decrease counter
       </button>
       <button class="btn btn-primary me-3" @click="store.addCounterToList">

@@ -11,4 +11,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  rules: {
+    'vue/v-on-handler-style': ['error'],
+  },
 };
