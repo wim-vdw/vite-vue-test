@@ -40,6 +40,10 @@ export const useUserStore2 = defineStore('user2', () => {
     counterList.value.push(count.value);
   }
 
+  function clearCounterList() {
+    counterList.value = [];
+  }
+
   return {
     count,
     name,
@@ -50,5 +54,6 @@ export const useUserStore2 = defineStore('user2', () => {
     decrement,
     upper,
     addCounterToList,
+    clearCounterList,
   };
 });

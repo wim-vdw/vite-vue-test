@@ -13,8 +13,8 @@ onMounted(() => {
 
 <template>
   <div class="my-3">
+    <h3>Counter: {{ store.count }}</h3>
     <p>
-      Counter: {{ store.count }}
       <button class="btn btn-primary me-3" @click="store.increment">
         Increase counter
       </button>
@@ -24,15 +24,18 @@ onMounted(() => {
       <button class="btn btn-primary me-3" @click="store.addCounterToList">
         Add counter to list
       </button>
+      <button class="btn btn-primary me-3" @click="store.clearCounterList()">
+        Clear list
+      </button>
     </p>
+    <p>First Name: {{ store.name.firstName }}</p>
+    <p>Last Name: {{ store.name.lastName }}</p>
+    <h1>{{ store.fullName }}</h1>
     <ul>
       <li v-for="(counter, index) in store.counterList" :key="index">
         {{ counter }}
       </li>
     </ul>
-    <p>First Name: {{ store.name.firstName }}</p>
-    <p>Last Name: {{ store.name.lastName }}</p>
-    <h1>{{ store.fullName }}</h1>
   </div>
 </template>
 
