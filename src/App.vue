@@ -1,17 +1,17 @@
 <script>
-import NavBar from './components/NavBar.vue';
+import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'App',
   data() {
     return {
       version: '2.4.6',
-    };
+    }
   },
   components: {
     NavBar,
   },
-};
+}
 </script>
 
 <template>

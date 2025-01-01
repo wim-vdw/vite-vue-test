@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia';
-import { ref, reactive, computed } from 'vue';
+import { defineStore } from 'pinia'
+import { ref, reactive, computed } from 'vue'
 
 export const useUserStore1 = defineStore('user1', {
   state() {
@@ -7,41 +7,41 @@ export const useUserStore1 = defineStore('user1', {
       firstName: 'James',
       lastName: 'Bond',
       authenticated: false,
-    };
+    }
   },
-});
+})
 
 export const useUserStore2 = defineStore('user2', () => {
-  const count = ref(0);
-  const doubleCount = computed(() => count.value * 2);
+  const count = ref(0)
+  const doubleCount = computed(() => count.value * 2)
 
   function increment() {
-    count.value++;
+    count.value++
   }
 
   function decrement() {
-    count.value--;
+    count.value--
   }
 
   const name = reactive({
     firstName: 'James',
     lastName: 'Bond',
-  });
-  const fullName = computed(() => name.lastName + ', ' + name.firstName);
+  })
+  const fullName = computed(() => name.lastName + ', ' + name.firstName)
 
   function upper() {
-    name.firstName = name.firstName.toUpperCase();
-    name.lastName = name.lastName.toUpperCase();
+    name.firstName = name.firstName.toUpperCase()
+    name.lastName = name.lastName.toUpperCase()
   }
 
-  const counterList = ref([]);
+  const counterList = ref([])
 
   function addCounterToList() {
-    counterList.value.push(count.value);
+    counterList.value.push(count.value)
   }
 
   function clearCounterList() {
-    counterList.value = [];
+    counterList.value = []
   }
 
   return {
@@ -55,5 +55,5 @@ export const useUserStore2 = defineStore('user2', () => {
     upper,
     addCounterToList,
     clearCounterList,
-  };
-});
+  }
+})

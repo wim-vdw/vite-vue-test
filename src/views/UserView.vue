@@ -1,15 +1,15 @@
 <script>
-import { useUserStore1 } from '@/stores/user.js';
-import InputForm from '@/components/InputForm.vue';
+import { useUserStore1 } from '@/stores/user.js'
+import InputForm from '@/components/InputForm.vue'
 
 export default {
   components: {
     InputForm,
   },
   setup() {
-    const userStore = useUserStore1();
+    const userStore = useUserStore1()
 
-    return { userStore };
+    return { userStore }
   },
   data() {
     return {
@@ -17,33 +17,33 @@ export default {
       lastName: '',
       firstNameValid: true,
       lastNameValid: true,
-    };
+    }
   },
   created() {
-    this.resetForm();
+    this.resetForm()
   },
   methods: {
     updateUser() {
       if (this.firstNameValid && this.lastName) {
-        this.userStore.firstName = this.firstName;
-        this.userStore.lastName = this.lastName;
-        this.$router.push('/');
+        this.userStore.firstName = this.firstName
+        this.userStore.lastName = this.lastName
+        this.$router.push('/')
       }
     },
     validateFirstName() {
-      this.firstNameValid = this.firstName !== '';
+      this.firstNameValid = this.firstName !== ''
     },
     validateLastName() {
-      this.lastNameValid = this.lastName !== '';
+      this.lastNameValid = this.lastName !== ''
     },
     resetForm() {
-      this.firstNameValid = true;
-      this.lastNameValid = true;
-      this.firstName = this.userStore.firstName;
-      this.lastName = this.userStore.lastName;
+      this.firstNameValid = true
+      this.lastNameValid = true
+      this.firstName = this.userStore.firstName
+      this.lastName = this.userStore.lastName
     },
   },
-};
+}
 </script>
 
 <template>
@@ -91,9 +91,7 @@ export default {
       >
         Update
       </button>
-      <button @click.prevent="resetForm" class="btn btn-warning ms-3">
-        Reset form
-      </button>
+      <button @click.prevent="resetForm" class="btn btn-warning ms-3">Reset form</button>
     </template>
   </InputForm>
 </template>

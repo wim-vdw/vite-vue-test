@@ -1,32 +1,26 @@
 <script setup>
-import { onMounted } from 'vue';
-import { useUserStore2 } from '@/stores/user';
+import { onMounted } from 'vue'
+import { useUserStore2 } from '@/stores/user'
 
-const store = useUserStore2();
+const store = useUserStore2()
 
 onMounted(() => {
   setTimeout(() => {
-    store.upper();
-  }, 3000);
-});
+    store.upper()
+  }, 3000)
+})
 </script>
 
 <template>
   <div class="my-3">
     <h3>Counter: {{ store.count }}</h3>
     <p>
-      <button class="btn btn-primary me-3" @click="store.increment">
-        Increase counter
-      </button>
-      <button class="btn btn-primary me-3" @click="store.decrement">
-        Decrease counter
-      </button>
+      <button class="btn btn-primary me-3" @click="store.increment">Increase counter</button>
+      <button class="btn btn-primary me-3" @click="store.decrement">Decrease counter</button>
       <button class="btn btn-primary me-3" @click="store.addCounterToList">
         Add counter to list
       </button>
-      <button class="btn btn-primary me-3" @click="store.clearCounterList()">
-        Clear list
-      </button>
+      <button class="btn btn-primary me-3" @click="store.clearCounterList()">Clear list</button>
     </p>
     <p>First Name: {{ store.name.firstName }}</p>
     <p>Last Name: {{ store.name.lastName }}</p>

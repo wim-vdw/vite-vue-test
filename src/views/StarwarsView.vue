@@ -1,5 +1,5 @@
 <script>
-import { StarwarsClient } from '@/services/StarwarsService';
+import { StarwarsClient } from '@/services/StarwarsService'
 
 export default {
   data() {
@@ -9,24 +9,24 @@ export default {
       result: '',
       disabled: false,
       activeColor: '',
-    };
+    }
   },
   methods: {
     async executeAPI() {
-      this.disabled = true;
-      const starwarsClient = new StarwarsClient(this.baseURL);
-      const response = await starwarsClient.callAPI(this.endpoint);
+      this.disabled = true
+      const starwarsClient = new StarwarsClient(this.baseURL)
+      const response = await starwarsClient.callAPI(this.endpoint)
       if (response.status === 'OK') {
-        this.activeColor = 'green';
-        this.result = response.data;
+        this.activeColor = 'green'
+        this.result = response.data
       } else {
-        this.activeColor = 'red';
-        this.result = response.error.message;
+        this.activeColor = 'red'
+        this.result = response.error.message
       }
-      this.disabled = false;
+      this.disabled = false
     },
   },
-};
+}
 </script>
 
 <template>
@@ -37,19 +37,10 @@ export default {
     </div>
     <div class="mb-3">
       <label for="endpoint" class="form-label">Endpoint</label>
-      <input
-        type="text"
-        class="form-control"
-        id="endpoint"
-        v-model="endpoint"
-      />
+      <input type="text" class="form-control" id="endpoint" v-model="endpoint" />
     </div>
     <div class="mb-3">
-      <button
-        class="btn btn-primary"
-        v-on:click="executeAPI"
-        v-bind:disabled="disabled"
-      >
+      <button class="btn btn-primary" v-on:click="executeAPI" v-bind:disabled="disabled">
         Execute API
       </button>
     </div>

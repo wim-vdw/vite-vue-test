@@ -1,15 +1,13 @@
 <script>
 export default {
   props: ['version'],
-};
+}
 </script>
 
 <template>
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">
-        Vue test application {{ version }}
-      </span>
+      <span class="navbar-brand mb-0 h1"> Vue test application {{ version }} </span>
       <button
         class="navbar-toggler"
         type="button"
@@ -26,9 +24,7 @@ export default {
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to="/user">User</router-link>
           <router-link class="nav-link" to="/starwars">Star Wars</router-link>
-          <router-link class="nav-link" to="/composition">
-            Composition API
-          </router-link>
+          <router-link class="nav-link" to="/composition"> Composition API</router-link>
           <router-link class="nav-link" to="/about">About</router-link>
         </div>
       </div>

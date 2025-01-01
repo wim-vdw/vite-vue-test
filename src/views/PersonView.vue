@@ -13,10 +13,10 @@ export default {
   },
   computed: {
     fullName() {
-      return `${this.lastName.toUpperCase()}, ${this.firstName}`;
+      return `${this.lastName.toUpperCase()}, ${this.firstName}`
     },
   },
-};
+}
 </script>
 
 <template>

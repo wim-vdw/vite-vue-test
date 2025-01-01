@@ -1,7 +1,7 @@
 <script>
-import PersonView from './PersonView.vue';
-import { useUserStore1 } from '@/stores/user';
-import { mapState, mapWritableState } from 'pinia';
+import PersonView from './PersonView.vue'
+import { useUserStore1 } from '@/stores/user'
+import { mapState, mapWritableState } from 'pinia'
 
 export default {
   components: {
@@ -14,7 +14,7 @@ export default {
       authenticated: 'authenticated',
     }),
   },
-};
+}
 </script>
 
 <template>
@@ -26,15 +26,8 @@ export default {
     >
     </PersonView>
     <div class="form-check">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        v-model="authenticated"
-        id="authenticated"
-      />
-      <label class="form-check-label" for="authenticated">
-        Authenticated
-      </label>
+      <input class="form-check-input" type="checkbox" v-model="authenticated" id="authenticated" />
+      <label class="form-check-label" for="authenticated"> Authenticated </label>
     </div>
   </div>
 </template>
